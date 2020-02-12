@@ -1,45 +1,43 @@
- %module "graphics"
- %{
+%module "graphics"
+%{
  /* Includes the header in the wrapper code */
 #include <SFML/Graphics.h>
- %}
+%}
 
- /* Parse the header file to generate wrappers */
+%define linux %enddef
 
-%define MACOSX %enddef
-%define __APPLE__ %enddef
-%define MACOSX %enddef
-%define macintosh %enddef
-%define Macintosh %enddef
-%define CSFML_SYSTEM_MACOS %enddef
+%ignore sfRenderTexture_createWithSettings;
+%ignore sfRenderTexture_getMaximumAntialiasingLevel;
+%ignore getLineSpacing;
+%ignore sfTexture_updateFromTexture;
 
-%include <SFML/Config.h>
+%include "SFML/Config.h"
 
-%include "Export.h"
-
-%include "BlendMode.h"
-%include "CircleShape.h"
-%include "Color.h"
-%include "ConvexShape.h"
-%include "Font.h"
-%include "FontInfo.h"
-%include "Glsl.h"
-%include "Glyph.h"
-%include "Image.h"
-%include "PrimitiveType.h"
-%include "Rect.h"
-%include "RectangleShape.h"
-%include "RenderStates.h"
-%include "RenderTexture.h"
-%include "RenderWindow.h"
-%include "Shader.h"
-%include "Shape.h"
-%include "Sprite.h"
-%include "Text.h"
-%include "Texture.h"
-%include "Transform.h"
-%include "Transformable.h"
-%include "Types.h"
-%include "Vertex.h"
-%include "VertexArray.h"
-%include "View.h"
+%include "SFML/Graphics/Export.h"
+%include "SFML/Graphics/BlendMode.h"
+%include "SFML/Graphics/CircleShape.h"
+%include "SFML/Graphics/Color.h"
+%include "SFML/Graphics/ConvexShape.h"
+%include "SFML/Graphics/Font.h"
+%include "SFML/Graphics/FontInfo.h"
+%include "SFML/Graphics/Glsl.h"
+%include "SFML/Graphics/Glyph.h"
+%include "SFML/Graphics/Image.h"
+%include "SFML/Graphics/PrimitiveType.h"
+%include "SFML/Graphics/RectangleShape.h"
+%include "SFML/Graphics/Rect.h"
+%include "SFML/Graphics/RenderStates.h"
+%include "SFML/Graphics/RenderTexture.h"
+%include "SFML/Graphics/RenderWindow.h"
+%include "SFML/Graphics/Shader.h"
+%include "SFML/Graphics/Sprite.h"
+%include "SFML/Graphics/Text.h"
+%include "SFML/Graphics/Texture.h"
+%include "SFML/Graphics/Transformable.h"
+%include "SFML/Graphics/Transform.h"
+%include "SFML/Graphics/Types.h"
+%include "SFML/Graphics/VertexArray.h"
+%include "SFML/Graphics/VertexBuffer.h"
+%include "SFML/Graphics/Vertex.h"
+%include "SFML/Graphics/BlendMode.h"
+%include "SFML/Graphics/View.h"
